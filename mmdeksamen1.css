@@ -1,174 +1,85 @@
-    /* Reset */
-* {
-    margin: 0;
+*{
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     background-color: #F0EFEC;
-    font-family: 'Instrument Serif', serif;
+}
+
+/*????*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+/*her starter header med navigationsbar*/
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 1500px;
+    height: 50px;
+    margin: 0% auto;
+    border: 2px solid #000000;
+    background-color: #000000
 }
 
 .logo {
     font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-}
-
-    /* Ingen streger under tekst */
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-    /* Header */
-.header {
-    background-color: #000000;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-    /* Logo */
-.logo {
-    display: inline-block;
-    color: #FFFFFF;
     font-size: 30px;
-    width: 100%;
-    height: auto
+    color: #F0EFEC;
+    text-decoration: none;
+    line-height: 50px;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
-    /* Navigationsmenu */
-.navigation {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: #000000;
-    overflow: hidden;
-}
-
-.menu a {
-    display: block;
-    padding: 30px;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-.meni a:hover {
-    background-color: #FFFFFF;
-}
-
-.navigation {
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-    /* Menu ikon */
-.hamburger {
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-.hamb-line {
-    background: #746767;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-}
-
-    /* Span tag styling */
-.hamb-line::before
-.hamb-line::after{
-    background-color: #746767;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.hamb-line::before {
-    top: 5px;
-}
-
-.hamb-line::before {
-    top: -5px;
-}
-
-    /* Gem checkbox */    
-.side-menu {
+.toggle-button {
     display: none;
-}
-
-    /* Toggler menu ikon */
-.side-menu:checked ~ nav{
-    max-width: 100%;
-}
-
-.side-menu:checked ~ .hamburger .hamb-line{
-    background: transparent;
-}
-
-.side-menu:checked ~ .hamburger .hamb-line::before{
-    transform: rotate(-45deg);
-}
-
-.side-menu:checked ~ .hamburger .hamb-line::after{
-    transform: rotate(45deg);
-    top: 0;
-}
-
-    /* Responsivitet */
-@media (min-width: 768px) {
-    .navigation {
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-}
-
-.menu li{
-    float: left;
-}
-
-.menu a:hover {
+    font-size: 25px;
     background-color: transparent;
-    color: #746767;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
 }
 
-.hamburger{
-    display: none;
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
-
-
-/* ----------------------------- Her starter main ----------------------------- */
+.sort-hr { 
+    border-top: 1px solid #000000;
+}
 
 .mig {
-    margin-top: 1px;
     width: 100%;
+    max-width: 1500px;
     height: auto;
 }
 
-.logohm {
-    margin-top: 40px;
-    width: 30px;
-    height: auto;
-}
+/*her starter main indhold*/
+/*------------------her starter portfolie------------------*/
 
-/* ----------------------------- Portfolie afsnit ----------------------------- */
+#portfoliestart {
+    display: flex;
+}
 
 .portfolie {
     width: 100%;
+    max-width: 1500px;
     height: auto;
     padding: 20px; 
     border: 5px;  
@@ -182,67 +93,41 @@ ul {
     width: 100%;
     height: auto;
     color: #746767;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .portfolie p {
     font-family: 'Instrument Serif', serif;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     width: 100%;
     height: auto;
+    line-height: 28px;
 }
 
-/* ----------------------------- Projekt knap ----------------------------- */
+/*responsiv*/
 
-.button {
-    margin: 70 px auto 0;
-    float: right;
-  }   
+@media (max-width:600px) {
+    .portfolie h2 {
+        font-size: 18px;
+    }
+    .portfolie p {
+        font-size: 14px;
+    }
+}
 
-  .button a {
-    font-family: 'Instrument Serif', serif;
-    width: 150 px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 12px 0;
-    color: #000;
-    border: .5px solid #000000;
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s;
-  }
+/*------------------her starter projekter------------------*/
 
-  .button a span{
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #746767;
-    z-index: -1;
-    transition: 0.5s;
-  }
-
-  .button a:hover span{
+#portfoliestart {
+    display: flex;
     width: 100%;
-  }
-
-  .button a:hover{
-    color: #FFFFFF;
-  }
-
-
-/* ----------------------------- Projekt afsnit ----------------------------- */ 
-
-#portfoliestart{
-    width: 100%;
+    max-width: 1500px;
     padding: 30px 0;
 }
 
 .projekter {
     width: 100%;
+    max-width: 1500px;
     height: auto;
     padding: 20px; 
     border: 5px;  
@@ -255,7 +140,7 @@ ul {
 .projekter h2 {
     font-family: 'Instrument Serif', serif;
     color: #746767;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     width: 100%;
     height: auto;
@@ -263,10 +148,11 @@ ul {
 
 .projekter p {
     font-family: 'Instrument Serif', serif;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     width: 100%;
     height: auto;
+    line-height: 28px;
 }
 
 .projektbox {
@@ -292,7 +178,8 @@ ul {
 }
 
 .overlap {
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -301,6 +188,17 @@ ul {
     background: linear-gradient(rgba(0, 0, 0, 0.5), #746767);
     opacity: 0;
     transition: 1;
+}
+
+/*responsiv*/
+
+@media (max-width:600px) {
+    .projekter h2 {
+        font-size: 18px;
+    }
+    .projekter p {
+        font-size: 14px;
+    }
 }
 
 /* Skrift over billeder */
@@ -316,15 +214,20 @@ ul {
     left: 50%;
     opacity: 0;
     transform: translateX(-50%);
-    transition: 1s;
+    transition: opacity 1s, bottom 1s; 
 }
 
 hr {
     background: #FFFFFF;
-    height: 2px;
+    height: 1px;
     border: 0;
     margin: 15px auto;
     width: 60%;
+}
+
+.beskrivelse h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 15px;
 }
 
 .beskrivelse p {
@@ -333,72 +236,33 @@ hr {
 }
 
 .egenprojekt:hover .beskrivelse {
-    bottom: 40%;
+    width: 50%;
+    height: auto;
+    bottom: 35%;
     opacity: 1;
 }
 
-/* Mobil version */
+/*responsiv*/
 
-@media screen and (max-width: 770px) {
-    .egenprojekt{
-        flex-basis: 100%;
-        margin-bottom: 30px;
-    }
+
+@media (max-width:650px) {
     .beskrivelse p {
-        font-size: 12px;
+        font-size: 10px;
     }
-    hr {
-        margin: 5px auto;
-    }
-    .egenprojekt:hover .beskrivelse {
-        bottom: 25% !important;
+    .beskrivelse h3 {
+        font-size: 10px;
     }
 }
 
-/* ----------------------------- Om mig knap ----------------------------- */
+/*------------------her starter "om mig"------------------*/
 
-.button2 {
-    margin: 70 px auto 0;
-    float: right;
-  }   
+#om mig {
+    display: flex;
+}
 
-  .button2 a {
-    font-family: 'Instrument Serif', serif;
-    width: 150 px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 12px 0;
-    color: #000;
-    border: .5px solid #000000;
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s;
-  }
-
-  .button2 a span{
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #746767;
-    z-index: -1;
-    transition: 0.5s;
-  }
-
-  .button2 a:hover span{
+.profiltekst {
     width: 100%;
-  }
-
-  .button2 a:hover{
-    color: #FFFFFF;
-  }
-
-   /* ----------------------------- Her starter "om mig" ----------------------------- */
-
-   .om mig {
-    width: 100%;
+    max-width: 1500px;
     height: auto;
     padding: 20px; 
     border: 5px;  
@@ -408,68 +272,78 @@ hr {
     border: none;
   }
   
-  .beskrivelse h2 {
+  .profiltekst h3 {
     font-family: 'Instrument Serif', serif;
     color: #746767;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     width: 100%;
     height: auto;
   }
   
-  .beskrivelse p {
+  .profiltekst p {
     font-family: 'Instrument Serif', serif;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     width: 100%;
     height: auto;
+    line-height: 28px;
   }
 
+  /*responsiv*/
 
-/* ----------------------------- Kotankt knap ----------------------------- */
+  @media (max-width:600px) {
+    .profiltekst h3 {
+        font-size: 18px;
+    }
+    .profiltekst p {
+        font-size: 14px;
+    }
+}
 
-.button3 {
-    margin: 70 px auto 0;
-    float: right;
-  }   
-
-  .button3 a {
-    font-family: 'Instrument Serif', serif;
-    width: 150 px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 12px 0;
-    color: #000;
-    border: .5px solid #000000;
+  .profilbilleder {
+    flex-basis: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
     position: relative;
-    z-index: 1;
-    transition: color 0.5s;
+}
+
+  .profilbilleder img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+/*responsiv*/
+
+@media (max-width: 768px) {
+    .profilbilleder {
+      margin: 10px;
+    }
+  
+    .profilbilleder img {
+      width: 100%;
+      margin: 10px;
+    }
   }
 
-  .button3 a span{
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #746767;
-    z-index: -1;
-    transition: 0.5s;
-  }
 
-  .button3 a:hover span{
+/*------------------her starter "kontakt"------------------*/
+
+#kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#kontakt {
     width: 100%;
-  }
-
-  .button3 a:hover{
-    color: #FFFFFF;
-  }
-
-/* ----------------------------- Her starter kontakt ----------------------------- */
-
-  .kontaktformular {
-    width: 100%;
+    max-width: 1500px;
     height: auto;
     padding: 20px; 
     border: 5px;  
@@ -477,12 +351,18 @@ hr {
     border-color: transparent;
     margin-top: 50px;
     border: none;
+    border-radius: 7px;
   }
+
+  .formular h2,
+#kontaktformular {
+  text-align: center;
+}
   
-  .formular h2 {
+  .formular h3 {
     font-family: 'Instrument Serif', serif;
     color: #746767;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     width: 100%;
     height: auto;
@@ -490,8 +370,188 @@ hr {
   
   .formular p {
     font-family: 'Instrument Serif', serif;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     width: 100%;
     height: auto;
+    margin-bottom: 40px;
+    line-height: 28px;
   }
+
+  #kontaktformular {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+
+  .sendinfo {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: #FFFFFF;
+    font-size: 15px;
+    font-family: 'Instrument Serif', serif;
+    margin-bottom: 22px;
+    transition: .3s;
+  }
+
+  .field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .field:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #746767;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-family: 'Instrument Serif', serif;
+    background-color: #746767;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: #F0EFEC;
+    color: #000000;
+}
+
+/*responsiv*/
+
+@media (max-width:600px) {
+    .formular h2 {
+        font-size: 18px;
+    }
+    .formular p {
+        font-size: 14px;
+    }
+    .field {
+        font-size: 14px;
+    }
+}
+
+/*------------------her starter footer------------------*/
+
+#footer {
+    background-color: #000000;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-cool {
+    width: 25%;
+    padding: 0 15px;
+    color: #FFFFFF;
+}
+
+.footer-cool h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-cool h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #746767;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-cool ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-cool ul li {
+    font-family: 'Instrument Serif', serif;
+    font-size: 15px;
+    text-transform: capitalize;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-cool ul li:hover {
+    color: #746767;
+    padding-left: 8px;
+}
+
+.footer-cool .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #746767;
+    margin: 0px 10px 10px 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.footer-cool .social-links a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.footer-cool p {
+    color: #746767;
+    font-family: 'Instrument Serif', serif;
+    margin-top: 100px;
+    font-size: 12px;
+}
+
+/*responsiv*/
+
+@media (max-width: 767px) {
+    .footer-cool{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-cool{
+        width: 100%;
+    }
+}
