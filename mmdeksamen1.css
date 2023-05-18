@@ -1,35 +1,83 @@
 *{
-    padding: 0;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: #F0EFEC;
+    --color1: #FFF ;
+    --color2: #181818 ;
+    font-family: 'Instrument Serif', serif;
 }
-
-/*????*/
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-/*her starter header med navigationsbar*/
-
-#navbar {
+.nav-bar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
 }
-
-.navigation {
-    width: 100%;
-    max-width: 1500px;
-    height: 50px;
-    margin: 0% auto;
-    border: 2px solid #000000;
-    background-color: #000000
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
 }
 
 .logo {
@@ -38,30 +86,6 @@ body {
     color: #F0EFEC;
     text-decoration: none;
     line-height: 50px;
-    margin-right: auto;
-    padding: 0 20px;
-}
-
-.toggle-button {
-    display: none;
-    font-size: 25px;
-    background-color: transparent;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.sort-hr { 
-    border-top: 1px solid #000000;
 }
 
 .mig {
@@ -69,6 +93,14 @@ body {
     max-width: 1500px;
     height: auto;
 }
+
+/*linje under overskrifter*/
+
+.sort-hr { 
+    border-top: 1px solid #000000;
+}
+
+/*potræt af mig til forside*/
 
 /*her starter main indhold*/
 /*------------------her starter portfolie------------------*/
@@ -113,6 +145,9 @@ body {
     }
     .portfolie p {
         font-size: 14px;
+    }
+    .logo {
+        font-size: 24px;
     }
 }
 
@@ -440,7 +475,7 @@ hr {
 /*responsiv*/
 
 @media (max-width:600px) {
-    .formular h2 {
+    .formular h3 {
         font-size: 18px;
     }
     .formular p {
