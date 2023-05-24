@@ -4,9 +4,10 @@
     padding: 0;
 }
 
+/*Farver til navigationsbar og header*/
 body {
     background-color: #F0EFEC;
-    --color1: #FFF ;
+    --color1: #F0EFEC ;
     --color2: #181818 ;
     font-family: 'Instrument Serif', serif;
 }
@@ -168,7 +169,6 @@ body {
     border: 5px;  
     background-color:transparent; 
     border-color: transparent;
-    margin-top: 50px;
     border: none;
 }
 
@@ -195,7 +195,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: flex;
 }
 
 .egenprojekt {
@@ -222,7 +221,6 @@ body {
     cursor: pointer;
     background: linear-gradient(rgba(0, 0, 0, 0.5), #746767);
     opacity: 0;
-    transition: 1;
 }
 
 /*responsiv*/
@@ -303,7 +301,6 @@ hr {
     border: 5px;  
     background-color:transparent; 
     border-color: transparent;
-    margin-top: 50px;
     border: none;
   }
   
@@ -421,13 +418,12 @@ hr {
     height: 100%;
     width: 100%;
     margin: auto;
-    padding: auto;
   }
 
   .sendinfo {
     max-width: 850px;
     display: grid;
-    grid-template-columns: 2, 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
