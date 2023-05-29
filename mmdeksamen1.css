@@ -10,6 +10,9 @@ body {
     --color2: #181818 ;
     font-family: 'Instrument Serif', serif;
 }
+
+/*Her starter navigationbaren*/
+
 .nav-bar {
     width: 100%;
     display: flex;
@@ -59,6 +62,7 @@ body {
     top: 20px;
     right: 20px;
 }
+
 #check {display: none;}
 @media(max-width: 610px){
     .menu {
@@ -94,16 +98,17 @@ body {
     height: auto;
 }
 
-/*linje under overskrifter*/
+/*Linje under overskrifter*/
 
 .sort-hr { 
     border-top: 1px solid #000000;
 }
 
-/*potræt af mig til forside*/
+/*Potræt af mig til forside*/
 
-/*her starter main indhold*/
-/*------------------her starter portfolie------------------*/
+/*Her starter main indhold*/
+
+/*------------------Her starter portfolie------------------*/
 
 #portfoliestart {
     display: flex;
@@ -137,7 +142,7 @@ body {
     line-height: 28px;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 @media (max-width:600px) {
     .portfolie h2 {
@@ -151,7 +156,7 @@ body {
     }
 }
 
-/*------------------her starter projekter------------------*/
+/*------------------Her starter projekter------------------*/
 
 #portfoliestart {
     display: flex;
@@ -223,7 +228,7 @@ body {
     opacity: 0;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 @media (max-width:600px) {
     .projekter h2 {
@@ -234,7 +239,7 @@ body {
     }
 }
 
-/* Skrift over billeder */
+/*Skrift over billeder*/
 
 .egenprojekt:hover .overlap {
     opacity: 1;
@@ -275,7 +280,7 @@ hr {
     opacity: 1;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 
 @media (max-width:650px) {
@@ -287,7 +292,7 @@ hr {
     }
 }
 
-/*------------------her starter "om mig"------------------*/
+/*------------------Her starter "om mig"------------------*/
 
 #om mig {
     display: flex;
@@ -303,27 +308,27 @@ hr {
     border-color: transparent;
     margin-top: 50px;
     border: none;
-  }
+}
   
-  .profiltekst h3 {
+.profiltekst h3 {
     font-family: 'Instrument Serif', serif;
     color: #746767;
     font-size: 25px;
     text-align: center;
     width: 100%;
     height: auto;
-  }
+}
   
-  .profiltekst p {
+.profiltekst p {
     font-family: 'Instrument Serif', serif;
     font-size: 18px;
     text-align: center;
     width: 100%;
     height: auto;
     line-height: 28px;
-  }
+}
 
-  /*responsiv*/
+  /*Responsiv*/
 
   @media (max-width:600px) {
     .profiltekst h3 {
@@ -334,7 +339,7 @@ hr {
     }
 }
 
-  .profilbilleder {
+.profilbilleder {
     flex-basis: 48%;
     display: flex;
     flex-wrap: wrap;
@@ -350,7 +355,7 @@ hr {
     border-radius: 7px;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 @media (max-width: 768px) {
     .profilbilleder {
@@ -361,10 +366,10 @@ hr {
       width: 100%;
       margin: 10px;
     }
-  }
+}
 
 
-/*------------------her starter "kontakt"------------------*/
+/*------------------Her starter "kontakt"------------------*/
 
 #kontakt {
     display: flex;
@@ -385,23 +390,23 @@ hr {
     margin-top: 50px;
     border: none;
     border-radius: 7px;
-  }
+}
 
-  .formular h2,
+.formular h2,
 #kontaktformular {
   text-align: center;
 }
   
-  .formular h3 {
+.formular h3 {
     font-family: 'Instrument Serif', serif;
     color: #746767;
     font-size: 25px;
     text-align: center;
     width: 100%;
     height: auto;
-  }
+}
   
-  .formular p {
+.formular p {
     font-family: 'Instrument Serif', serif;
     font-size: 18px;
     text-align: center;
@@ -409,9 +414,11 @@ hr {
     height: auto;
     margin-bottom: 40px;
     line-height: 28px;
-  }
+}
 
-  #kontaktformular {
+/*Her starter kontaktformular*/
+
+#kontaktformular {
     position: relative;
     display: flex;
     justify-content: center;
@@ -419,18 +426,18 @@ hr {
     height: 100%;
     width: 100%;
     margin: auto;
-  }
+}
 
-  .sendinfo {
+.sendinfo {
     max-width: 850px;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+}
 
-  .field {
+.field {
     width: 100%;
     padding: 0.5rem 1rem;
     outline: none;
@@ -440,18 +447,18 @@ hr {
     font-family: 'Instrument Serif', serif;
     margin-bottom: 22px;
     transition: .3s;
-  }
+}
 
-  .field:hover {
+.field:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .field:focus {
+.field:focus {
     background-color: #FFFFFF;
     border: 2px solid #746767;
-  }
+}
 
-  .btn {
+.btn {
     width: 100%;
     padding: 0.5rem 1rem;
     font-size: 15px;
@@ -469,7 +476,7 @@ hr {
     color: #000000;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 @media (max-width:600px) {
     .formular h3 {
@@ -483,7 +490,7 @@ hr {
     }
 }
 
-/*------------------her starter footer------------------*/
+/*------------------Her starter footer------------------*/
 
 #footer {
     background-color: #000000;
@@ -547,6 +554,8 @@ ul {
     padding-left: 8px;
 }
 
+/*Sociale medier*/
+
 .footer-cool .social-links a {
     display: inline-block;
     height: 40px;
@@ -573,7 +582,7 @@ ul {
     font-size: 12px;
 }
 
-/*responsiv*/
+/*Responsiv*/
 
 @media (max-width: 767px) {
     .footer-cool{
